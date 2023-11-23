@@ -1,0 +1,60 @@
+GET  http://localhost:2115/individualEmployee
+token : eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7InJlZ2RJZCI6IlNIMTAwMyJ9LCJpYXQiOjE3MDA0NTg1MDAsImV4cCI6MTcwMDQ5NDUwMH0.1RIPcY5PBy35A4TcsBcOozab29ZvAjbGp4a1GIReMHY
+###
+POST http://localhost:2115/login
+Content-Type: application/json
+
+{
+    "regdId":"SH1001",
+    "password":"Sai@123"
+}
+###
+POST http://localhost:2115/addlearningpath
+token : eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7InJlZ2RJZCI6IlNIMTAwMSJ9LCJpYXQiOjE3MDA1MzcyMzksImV4cCI6MTcwMDU3MzIzOX0.IF6aTFy0KQq4yb5V1BGyR-In7CFn7ogoqhdXfv9eOiA
+
+{
+    "learningPathTitle":"ReactJS",
+    "relevantSkillTags": "Web Development",
+    "coverLetter":"React Introduction",
+    "difficultyLevel":"Easy",
+    "subscription":"Free",
+    "price":"0",
+    "discount":"0",
+    "authorName": "Prakash",
+    "hours":"0",
+    "minutes":"30",
+    "learningimg":"https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.freecodecamp.org%2Fnews%2Freact-js-for-beginners-props-state-explained%2F&psig=AOvVaw1veEzxuEouaxuVoIWycseZ&ust=1700582301207000&source=images&cd=vfe&ved=0CBIQjRxqFwoTCODxiPL40oIDFQAAAAAdAAAAABAE",
+    "fileName":"ReactJs Introduction",
+    "requirements":"laptop need nodeJs installation"
+    
+}
+###
+PUT http://localhost:2115/addTopicsinlearningpath
+token : eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7InJlZ2RJZCI6IlNIMTAwMSJ9LCJpYXQiOjE3MDA1NDMzMDQsImV4cCI6MTcwMDU3OTMwNH0.uh7rYPp2eQ9kCzsvyNPvwn71qk0G4BsQSsGGNEb4jOM
+
+{
+   "_id" :"655c3b7ffe32bc66bff4bd22",
+   "topicName":"Reactjs",
+   "description":"Reactjs introduction part",
+   "publish":"now"
+}
+
+###
+POST http://localhost:2115/addContentOfTopicsinlearningpath
+token : eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7InJlZ2RJZCI6IlNIMTAwMSJ9LCJpYXQiOjE3MDA1NDMzMDQsImV4cCI6MTcwMDU3OTMwNH0.uh7rYPp2eQ9kCzsvyNPvwn71qk0G4BsQSsGGNEb4jOM
+
+{
+    "_id":"655c3b7ffe32bc66bff4bd22",
+    "topicName":"Reactjs",
+    "contentTitle" :"React installation part",
+    "contentdes" : "React Installation part description",
+    "contentimg" : "https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.knackforge.com%2Fblog%2Fbenefits-of-reactjs-and-reasons-to-choose-it-for-your-project&psig=AOvVaw2yrEDuzVQ4GgyL2Agqlu4j&ust=1700631416266000&source=images&cd=vfe&ved=0CBIQjRxqFwoTCIDnjO6v1IIDFQAAAAAdAAAAABAE",
+    "publish" : "now"
+}
+###
+DELETE http://localhost:2115/onselectedContentinTopicinLearningPath/655c79cdbd1747f343e70ead/655c79cdbd1747f343e70ead/655c79cdbd1747f343e70ead
+###
+DELETE http://localhost:2115/onselectedTopicinLearningPath/655c79cdbd1747f343e70ead/655c79cdbd1747f343e70ead
+
+
+
